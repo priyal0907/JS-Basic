@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                let arrowFun = (a, b) => {
+            let data = {
+                total: a * b,
+                tota: a * b,
+                totl: a * b,
+                toal: a * b,
+                ttal: a * b,
+                ta: a * b,
+                to: a * b
+            }
+
+            return data  
+            
+        }
+
+        // Invoke Function and pass param 4=a, 5=b
+        let total = arrowFun(4, 5)
+        console.log(total, 'Arrow Function');
+
+        // Normal Function
+        function test(a, b, c, d, e, f) {
+            return a * b * c * d
+        }
+
+        // Invoke Function
+        let result = test(4, 5, 6, 9)
+        console.log(result, 'Return Type Function');
+    </script>
+</body>
+</html>
