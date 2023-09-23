@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function waitforR() {
+            return new Promise((resolve) => {
+                setInterval(() => {
+                    resolve('resolve')
+                }, 1000);
+            })
+        }
+        async function getData() {
+            console.log('calling....');
+            const result = await waitforR()
+            console.log(result, 'result');
+        }
+        getData();
+
+        //========================================//
+
+        function priyal() {
+            return new Promise((problem) => {
+                setInterval(() => {
+                    problem('problem')
+                }, 2000);
+            })
+        }
+        async function sellData() {
+            console.log('please receive the call');
+            const issue = await priyal()
+            console.log(issue, 'issue');
+        }
+        sellData();
+
+        //================================================//
+
+        function product() {
+            return new Promise((Buy) => {
+                setInterval(() => {
+                    Buy('Buy')
+                }, 1000);
+            })
+        }
+        async function college() {
+            console.log('product marketing');
+            const gree = await product()
+            console.log(gree, 'gree');
+
+        }
+        college();
+
+        //===========================================//
+
+        function square() {
+            return new Promise((research) => {
+                setInterval(() => {
+                    research('research')
+                }, 5000)
+            })
+        }
+        async function school() {
+            console.log('recheck');
+            const study = await square()
+            console.log(study, 'study');
+        }
+        school();
+
+        //======================================================//
+
+        function triangle(){
+            return new Promise((add)=>{
+                setInterval(()=>{
+                    add('add')
+                }, 7000)
+            })
+        }
+        async function cube(){
+            console.log('recalling');
+            const display = await triangle()
+            console.log(display, 'display');
+        }
+        cube();
+
+        //=================================================//
+
+        function myfun(){
+            return new Promise((resolve)=>{
+                setInterval(()=>{
+                    resolve('reslove')
+                }, 3000)
+            })
+        }
+        async function auto(){
+            console.log('scrolling');
+            const run = await myfun()
+            console.log(run, 'run');
+        }
+        auto();
+
+    </script>
+</body>
+
+</html>

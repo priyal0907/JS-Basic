@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function aero() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve('plane')
+                }, 3000)
+            })
+        }
+        async function asyncCall() {
+            console.log('new function');
+            const result = await aero()
+            console.log(result, 'result');
+        }
+        setInterval(() => {
+            asyncCall()
+        }, 5000)
+
+        // console.log("============================================")
+
+        // 2) function
+
+        function data(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('data transfer')
+                },3000)
+            })
+        }
+        async function getdata(){
+            console.log('new data ');
+            const result = await data()
+            console.log(result,'result');
+        }
+        setInterval(() => {
+            getdata()
+        }, 5000);
+
+
+        function wait(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('waiting order')
+                },3000)
+            })
+        }
+        async function waiting(){
+            console.log('old data ');
+            const result = await wait()
+            console.log(result,'result');
+        }
+        setInterval(() => {
+            waiting()
+        }, 5000);
+
+
+        function calendar(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('new date')
+                },3000)
+            })
+        }
+        async function sunday(){
+            console.log('new day ');
+            const result = await calendar()
+            console.log(result,'result');
+        }
+        setInterval(() => {
+            sunday()
+        }, 5000);
+
+
+        function hour(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('24 hour')
+                },3000)
+            })
+        }
+        async function minutes(){
+            console.log('seconds ');
+            const result = await hour()
+            console.log(result,'result');
+        }
+        setInterval(() => {
+            minutes()
+        }, 5000);
+        
+
+
+    </script>
+</body>
+
+</html>

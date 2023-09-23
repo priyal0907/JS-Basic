@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+         console.log("============================================")
+
+        //  1) function
+        console.log("1th function start")
+
+        function resolveAfter1Seconds() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve('resolved');
+                }, 1000);
+            });
+        }
+
+        async function asyncCall() {
+            console.log('calling');
+            const result = await resolveAfter1Seconds();
+            console.log(result);
+        }
+
+        asyncCall();
+
+        console.log("============================================")
+
+        // 2) function
+        console.log("2th function start")
+
+        function recalling() {
+            return new Promise((calculate)=>{
+                setTimeout(() => {
+                    calculate('calculate');
+                }, 2000);
+            })
+        }
+        async function ringing(){
+            console.log('receive');
+            const result = await recalling()
+            console.log(result);
+        }
+        ringing();
+
+        console.log("============================================")
+        // 3.function
+        console.log("3th function start")
+
+        function time(){
+            return new Promise((second)=>{
+                setTimeout(()=>{
+                    second('second');
+                }, 3000)
+            })
+        }
+        async function receive(){
+            console.log('please');
+            const result =await time()
+            console.log('result');
+        }
+        receive();
+
+        console.log("============================================")
+
+        // 4.function
+        console.log("4th function start")
+
+        function hour(){
+            return new Promise((misscall) => {
+                setTimeout(()=>{
+                    misscall('misscall')
+                }, 4000)
+            })
+        }
+        async function promate(){
+            console.log('please receive the call');
+            const result = await hour()
+            console.log('result');
+        }
+        promate();
+
+        console.log("============================================")
+        // 5. function
+        console.log("5th function start")
+
+        function fun(){
+            return new Promise((hello)=>{
+                setTimeout(()=>{
+                    hello('hello')
+                }, 5000)
+            })
+        }
+        async function content(){
+            console.log('how are you');
+            const result = fun()
+            console.log('result');
+        }
+        content();
+
+        console.log("============================================")
+        
+
+        // 6) function
+
+        console.log("6th function start")
+        
+        function running(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('time')
+                }, 6000)
+            })
+        }
+        async function speed(){
+            console.log('hourse is start a run');
+            const data = await running()
+            console.log(data);
+        }
+        speed();
+
+        console.log("============================================")
+        
+        console.log("7th function start")
+
+        function fruits(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve('kiwi')
+                }, 7000)
+            })
+        }
+        async function apple(){
+            console.log('kiwi');
+            const result = await fruits()
+            console.log(result);
+        }
+        apple();
+
+
+    </script>
+</body>
+
+</html>
