@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data ={
+            name:"savaj priyal",
+            age:23,
+            phone:"+91 7046674015",
+            is_married:false,
+            aadhar_card:561598525409,
+        }
+        sessionStorage.setItem('savaj', JSON.stringify("data"))
+
+        let getdata=JSON.parse(sessionStorage.getItem('savaj'))
+
+        console.log(getdata);
+    </script>
+</body>
+</html>
