@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+
+<body>
+</body>
+<script>
+    //    =============== Map ( Min try 10 example )==================================
+    // 1.
+    var userRecords = [
+        {
+            name: 'pooja kachhadiya',
+            age: 21,
+            contact: 9033343443,
+        },
+        {
+            name: 'riya parmar',
+            age: 20,
+            contact: 7652490887,
+        },
+        {
+            name: 'priyal savaj',
+            age: 23,
+            contact: 9054378976,
+        },
+        {
+            name: 'pavan dave',
+            age: 22,
+            contact: 9906512357,
+        },];
+
+    function info(userRecords) {
+        var age = userRecords.map(p => p.age)
+        return age
+    }
+    var result = info(userRecords)
+    console.log(result, 'result');
+
+    console.log("\n");
+    console.log("\n");
+
+
+
+    // 2.
+    var schooldata = [{
+        student_name: 'Sardhara shaurya',
+        std: 9,
+        phone: 5687091234,
+    },
+    {
+        student_name: 'Zalavadiya adi',
+        std: 7,
+        phone: 5687091234,
+    },
+    {
+        student_name: 'Gajera zeel',
+        std: 9,
+        phone: 5687091234,
+    },];
+
+    function schoolinfo(schooldata) {
+        var std = schooldata.map(s => s.std)
+        var student_name = schooldata.map(s => s.student_name)
+        var phone = schooldata.map(s => s.phone)
+        return { std, student_name, phone }
+
+    }
+    var Allstudentstd = schoolinfo(schooldata)
+    var Allstudentname = schoolinfo(schooldata)
+    var Allstudentphone = schoolinfo(schooldata)
+
+    console.log(Allstudentstd, 'Allstudentstd');
+    console.log(Allstudentname, 'Allstudentname');
+    console.log(Allstudentphone, 'Allstudentphone');
+
+    console.log("\n");
+    console.log("\n");
+
+
+    // 3.
+    var workerdata = [{
+        name: 'jay mishtri',
+        working_hr: 7,
+        working_day: 20,
+    },
+    {
+        name: 'rima karkar',
+        working_hr: 5,
+        working_day: 28,
+    },
+    {
+        name: 'rekha varma',
+        working_hr: 9,
+        working_day: 19,
+    },
+    ];
+    function workerinfo(workerdata) {
+        var name = workerdata.map(w => w.name)
+        return name
+    }
+    var allworkerinfo = workerinfo(workerdata)
+    console.log(allworkerinfo, 'allworkerinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+    // 4.
+    var clientdata = [{
+        name: 'saint joseph',
+        age: 30,
+        country: 'Uk',
+    },
+    {
+        name: 'marina miracle',
+        age: 39,
+        country: 'USA',
+    },
+    {
+        name: 'A.h reddy',
+        age: 40,
+        country: 'Austalia',
+    },
+    ];
+    function clientinfo(clientdata) {
+        var country = clientdata.map(o => o.country)
+        return country
+    }
+    var allclientinfo = clientinfo(clientdata)
+    console.log(allclientinfo, 'allclientinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+
+    // 5.
+    var doctordata = [{
+        name: 'Dr.mehul bhatt',
+        degree: 'MBBS',
+    },
+    {
+        name: 'Dr.mitali addhvaryu',
+        degree: 'BHMS',
+    },
+    ];
+    function doctorinfo(doctordata) {
+        var degree = doctordata.map(m => m.degree)
+        return degree
+    }
+    var alldoctorinfo = doctorinfo(doctordata)
+    console.log(alldoctorinfo, 'alldoctorinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+    console.log("======================================");
+
+    // 6.) function
+    
+    var goldmedalistdata = [{
+        name: 'priyanka patel',
+        subject: 'physics',
+        age: 28,
+    },
+    {
+        name: 'ravi patel',
+        subject: 'account',
+        age: 24,
+    },
+    {
+        name: 'krina gajera',
+        subject: 'biology',
+        age: 30,
+    },
+    ];
+    function goldmedalistinfo(goldmedalistdata) {
+        var subject = goldmedalistdata.map(f => f.subject)
+        return subject
+    }
+    var allgoldmedalistinfo = goldmedalistinfo(goldmedalistdata)
+    console.log(allgoldmedalistinfo, 'allgoldmedalistinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+    // 7.
+    var engineerdata = [{
+        name: 'manish patel',
+        age: 26,
+        specialist: 'civil',
+    },
+    {
+        name: 'darshan patel',
+        age: 24,
+        specialist: 'Be technical',
+    },
+    ];
+    function engineerinfo(engineerdata) {
+        var specialist = engineerdata.map(y => y.specialist)
+        return specialist
+    }
+    var allengineerinfo = engineerinfo(engineerdata)
+    console.log(allengineerinfo, 'allengineerinfo');
+
+
+    console.log("\n");
+    console.log("\n");
+
+    // 8.
+    var Employeedata = [{
+        name: 'pavan dabhi',
+        age: 24,
+        skill: 'designer',
+    },
+    {
+        name: 'charmi jani',
+        age: 24,
+        skill: 'node developer',
+    },
+    {
+        name: 'krishva ramani',
+        age: 22,
+        skill: 'figma developer',
+    },
+    ];
+    function Employeeinfo(Employeedata) {
+        var skill = Employeedata.map(i => i.skill)
+        return skill
+    }
+    var allEmployeeinfo = Employeeinfo(Employeedata)
+    console.log(allEmployeeinfo, 'allEmployeeinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+    // 9.
+    var teacherdata = [{
+        name: 'kailash noghanvadra',
+        age: 30,
+        degree: 'B.Ed',
+    }]
+    function teacherinfo(teacherdata) {
+        var name = teacherdata.map(c => c.name)
+        return name
+    }
+    var allteacherinfo = teacherinfo(teacherdata)
+    console.log(allteacherinfo, 'allteacherinfo');
+
+    console.log("\n");
+    console.log("\n");
+
+    // 10.
+
+    var studentdata = [{
+        name: 'pooja patel',
+        age: 21,
+        course: 'Bcom',
+    },
+    {
+        name: 'yagnik vaddoriya',
+        age: 23,
+        course: 'bba',
+    },
+    ];
+    function studentinfo(studentdata) {
+        var course = studentdata.map(y => y.course)
+        return course
+    }
+    var allstudentinfo = studentinfo(studentdata)
+    console.log(allstudentinfo, 'allstudentinfo');
+
+</script>
+
+</html>
