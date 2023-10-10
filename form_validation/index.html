@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Registration Form</h1>
+        <input id="name" type="text" placeholder="Enter Your Name">
+        <br><br>
+        <input id="address" type="text" placeholder="Enter Your Address">
+        <br><br>
+        <input id="age" type="number" placeholder="Enter Your Age">
+        <br><br>
+        <input id="job" type="text" placeholder="Enter Your Job">
+        <br><br>
+        <input id="country" type="text" placeholder="Enter Your Country">
+        <br><br>
+        <input id="phone" type="number" placeholder="Enter Your Phone">
+        <br><br>
+        <button type="submit" onclick="submitForm()">Please Submit Form</button>
+        <br><br>
+        <p id="error" style="color: red;"></p>
+
+        <hr />
+        <p>User Information</p>
+        <button onclick="getUserInfo()">Get User Data</button>
+        <p id="test_name"></p>
+        <p id="test_address"></p>
+        <p id="test_age"></p>
+        <p id="test_job"></p>
+        <p id="test_country"></p>
+        <p id="test_phone"></p>
+    </center>
+</body>
+<script>
+    function submitForm() {
+        let name = document.getElementById('name').value
+        let address = document.getElementById('address').value
+        let age = document.getElementById('age').value
+        let job = document.getElementById('job').value
+        let country = document.getElementById('country').value
+        let phone = document.getElementById('phone').value
+        try {
+            if (name && address && age && job && country &&  phone) {
+                alert('Form Submitted !!')
+                document.getElementById('error').innerHTML = ''
+                let userData = {
+                    userName: name,
+                    address,
+                    age,
+                    job,
+                    country,
+                    phone
+                }
+
+                localStorage.setItem('userInformation', JSON.stringify(userData))
+            } else {
+                throw 'please fill this form'
+            }
+        } catch (error) {
+            document.getElementById('error').innerHTML = error
+        }
+
+    }
+
+    function getUserInfo() {
+        let userdata = JSON.parse(localStorage.getItem('userInformation'))
+        document.getElementById('test_name').innerHTML = userdata.userName ?? 'Something went to wrong'
+        document.getElementById('test_address').innerHTML = userdata.address ?? 'Something went to wrong'
+        document.getElementById('test_age').innerHTML = userdata.age ?? 'Something went to wrong'
+        document.getElementById('test_job').innerHTML = userdata.job ?? 'Something went to wrong'
+        document.getElementById('test_country').innerHTML = userdata.country ?? 'Something went to wrong'
+        document.getElementById('test_phone').innerHTML = userdata.phone ?? 'Something went to wrong'
+    }
+</script>
+
+</html>
